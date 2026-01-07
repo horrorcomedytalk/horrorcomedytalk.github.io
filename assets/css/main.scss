@@ -264,3 +264,46 @@ body {
     margin-top: 0 !important;
     line-height: 1.4 !important;
 }
+/* RE-DISPOSITION DE LA GRILLE POUR TOUT AFFICHER */
+.post {
+    display: grid !important;
+    grid-template-columns: 150px 1fr !important; /* Image à gauche (150px), reste à droite */
+    grid-template-areas: 
+        "thumb content"
+        "player player" !important;
+    gap: 15px 25px !important;
+    height: auto !important;
+}
+
+/* L'IMAGE (Zone "thumb") */
+.post img {
+    grid-area: thumb !important;
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: contain !important;
+}
+
+/* LE CONTENU DE DROITE (Zone "content") */
+/* On cible le lien du titre et les paragraphes */
+.post h2, .post p, .post .excerpt {
+    grid-column: 2 !important; 
+    grid-row: 1 !important;
+    display: block !important;
+}
+
+/* On décale le texte sous le titre pour qu'ils ne se chevauchent pas */
+.post h2 {
+    margin-top: 0 !important;
+    margin-bottom: 50px !important; /* Crée l'espace pour le texte en dessous */
+}
+
+.post p, .post .excerpt {
+    margin-top: 45px !important; /* Le texte vient se loger sous le titre */
+    color: #90a4ae !important;
+}
+
+/* LE LECTEUR (Zone "player") */
+.player-container, audio {
+    grid-area: player !important;
+    width: 100% !important;
+}
