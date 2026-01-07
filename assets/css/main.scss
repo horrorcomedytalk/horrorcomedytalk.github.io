@@ -90,7 +90,7 @@ body {
     width: 100% !important;   /* L'image prend toute la largeur */
     height: auto !important;  /* L'image garde ses proportions sans être écrasée */
     max-height: 200px;        /* Empêche l'image de devenir géante */
-    object-fit: cover;        /* Remplit bien le cadre proprement */
+    object-fit: contain;        /* Remplit bien le cadre proprement */
     border-radius: 8px;
     margin-bottom: 15px;
 }
