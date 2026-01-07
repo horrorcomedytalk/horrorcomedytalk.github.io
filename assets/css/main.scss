@@ -100,3 +100,37 @@ body {
     margin-top: auto;         /* Pousse le lecteur vers le bas de la vignette */
     padding-top: 10px;
 }
+/* RÉORGANISATION DE LA VIGNETTE : TEXTE À GAUCHE, IMAGE À DROITE */
+.post {
+    display: flex !important;
+    flex-direction: row-reverse !important; /* Met l'image à droite et le texte à gauche */
+    align-items: center !important;        /* Aligne tout verticalement au centre */
+    justify-content: space-between !important;
+    padding: 20px !important;
+    height: auto !important;
+    min-height: 220px !important;
+}
+
+/* LE CONTENEUR DU TEXTE (Titre + Description) */
+.post .title, .post .excerpt-container {
+    flex: 1 !important;          /* Prend tout l'espace restant à gauche */
+    padding-right: 20px !important;
+    text-align: left !important;
+}
+
+/* L'IMAGE À DROITE */
+.post img {
+    width: 150px !important;     /* Taille fixe pour l'image pour qu'elle ne prenne pas trop de place */
+    height: 150px !important;
+    object-fit: contain !important;
+    background-color: transparent !important;
+    margin: 0 !important;        /* Enlève les marges qui pourraient décaler */
+    flex-shrink: 0 !important;   /* Empêche l'image de rétrécir */
+}
+
+/* AJUSTEMENT DU LECTEUR AUDIO */
+/* S'il est dans le flux, on le force à prendre toute la largeur en dessous ou à rester sous le texte */
+.player-container {
+    width: 100% !important;
+    margin-top: 15px !important;
+}
