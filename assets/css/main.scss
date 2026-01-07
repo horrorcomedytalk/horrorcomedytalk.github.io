@@ -334,3 +334,46 @@ body {
     grid-row: 2 !important;            /* Force le passage à la ligne 2 */
     margin-top: 15px !important;       /* Espace de sécurité */
 }
+/* --- CONFIGURATION "ZÉRO CONFLIT" --- */
+.post {
+    position: relative !important;
+    display: block !important; /* On sort du mode Grid qui semble bloquer */
+    padding: 20px !important;
+    padding-bottom: 80px !important; /* On laisse de la place en bas pour le lecteur */
+    min-height: 200px !important;
+    height: auto !important;
+    overflow: hidden !important;
+}
+
+/* L'IMAGE À GAUCHE */
+.post img {
+    float: left !important;
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: contain !important;
+    margin-right: 20px !important;
+    margin-bottom: 10px !important;
+}
+
+/* LE BLOC TEXTE (TITRE + DESCRIPTION) */
+.post h2, .post p, .post .excerpt {
+    display: block !important;
+    margin-left: 170px !important; /* On décale le texte pour ne pas chevaucher l'image */
+    text-align: left !important;
+    visibility: visible !important;
+}
+
+.post h2 {
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+/* LE LECTEUR AUDIO FORCÉ EN BAS */
+.player-container, audio {
+    position: absolute !important;
+    bottom: 15px !important;
+    left: 20px !important;
+    right: 20px !important;
+    width: calc(100% - 40px) !important;
+    margin: 0 !important;
+}
