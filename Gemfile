@@ -1,14 +1,9 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
-gemspec
 
-gem 'jekyll'
+# On remplace 'jekyll' par 'github-pages' qui contient déjà 
+# jekyll-paginate, jekyll-feed, jekyll-seo-tag et jekyll-sitemap
+gem "github-pages", group: :jekyll_plugins
 
-gem 'wdm', '>= 0.1.0'
-
-gem 'jekyll-paginate'
-gem 'jekyll-feed'
-gem 'jekyll-seo-tag'
-gem 'jekyll-sitemap'
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# Nécessaire pour la compatibilité Windows/Système
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "wdm", ">= 0.1.0", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
