@@ -2,69 +2,50 @@
 ---
 
 @import "base", "background", "header", "sidebar", "home", "post", "archive", "player";
-/* --- Style Personnalisé L'Écho des Songes --- */
 
-/* 1. Fond et texte général */
-body {
-    background-color: #0b0e14 !important; /* Noir bleuté profond */
-    color: #cfd8dc !important;          /* Gris clair bleuté pour le texte */
-    font-family: 'Georgia', serif;      /* Une police un peu plus "contée" */
+/* --- AMBIANCE ABYSSES : L'ÉCHO DES SONGES --- */
+
+/* 1. Force le fond noir sur TOUTE la page */
+html, body {
+    background-color: #0b0e14 !important;
+    color: #cfd8dc !important;
+    font-family: 'Georgia', serif;
 }
 
-/* 2. Sidebar (là où est ton Moine) */
+/* 2. Supprime radicalement la vague (sous toutes ses formes) */
+.wave, #wave, [class*="wave"] {
+    display: none !important;
+    background: none !important;
+    visibility: hidden !important;
+}
+
+/* 3. Animation de l'ombre pulsante bleue */
+@keyframes pulseBlue {
+    0% { box-shadow: 0 0 8px rgba(0, 212, 255, 0.3); }
+    50% { box-shadow: 0 0 25px rgba(0, 212, 255, 0.7); }
+    100% { box-shadow: 0 0 8px rgba(0, 212, 255, 0.3); }
+}
+
+/* 4. Application à la Sidebar (Menu de droite) */
 #sidebar {
     background-color: #161b22 !important;
-    border-right: 1px solid #30363d;
+    border: 1px solid rgba(0, 212, 255, 0.4) !important;
+    animation: pulseBlue 4s infinite ease-in-out !important;
+    padding: 20px;
 }
 
-/* 3. Liens et titres */
-a, .post-link {
-    color: #4fc3f7 !important; /* Bleu clair électrique */
-    text-decoration: none;
-}
-
-a:hover {
-    color: #81d4fa !important;
-    text-decoration: underline;
-}
-
-/* 4. Le titre du site dans l'info */
+/* 5. Style des textes et liens */
 #info h3 {
-    color: #ffffff;
-    text-transform: uppercase;
+    color: #ffffff !important;
     letter-spacing: 2px;
 }
 
-/* 5. Le Moine (Sidebar-logo) */
-.sidebar-logo {
-    width: 100%;
-    height: auto;
-    border-radius: 15px; /* Coins un peu arrondis */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Ombre pour donner du relief */
+a, .post-link {
+    color: #4fc3f7 !important;
 }
 
-/* Rend la vague invisible ou noire */
-.wave {
-    background: #0b0e14 !important; 
-    display: none; /* Ou 'none' pour la supprimer complètement */
-}
-
-/* Animation de l'ombre qui respire */
-@keyframes pulseBlue {
-    0% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.2); }
-    50% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.6); }
-    100% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.2); }
-}
-
-/* Application à la sidebar */
-#sidebar {
-    border: 1px solid rgba(0, 212, 255, 0.3) !important;
-    animation: pulseBlue 4s infinite ease-in-out;
-}
-
-/* Application aux lecteurs audio (une fois qu'ils seront là) */
-.audio-player, audio {
-    animation: pulseBlue 4s infinite ease-in-out;
-    border-radius: 30px;
-    background-color: #161b22;
+/* 6. Préparation pour le futur lecteur audio */
+.audio-player, audio, .player {
+    animation: pulseBlue 4s infinite ease-in-out !important;
+    border-radius: 30px !important;
 }
