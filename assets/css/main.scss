@@ -153,9 +153,9 @@ body {
     margin: 0 auto;
 }
 @keyframes pulse {
-  0% { box-shadow: 0 0 0px 0px currentColor; }
-  50% { box-shadow: 0 0 15px 2px currentColor; }
-  100% { box-shadow: 0 0 0px 0px currentColor; }
+  0% { box-shadow: 0 0 0px 5px currentColor; }
+  50% { box-shadow: 0 0 35px 5px currentColor; }
+  100% { box-shadow: 0 0 0px 5px currentColor; }
 }
 
 /* On l'applique à la sidebar */
@@ -165,5 +165,5 @@ body {
 
 /* On l'applique aux vignettes */
 .post, .post-item, .vignette {
-  animation: pulse 4s infinite ease-in-out;
+  animation: pulse 2.5s infinite ease-in-out;
 }
