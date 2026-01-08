@@ -1,13 +1,13 @@
 # Site settings
 title: "Horror Comedy Talk"
-description: "Les interviews des objets stars du cinéma"
-podcast-description: "Les interviews des objets stars du cinéma"
-url: "https://horrorcomedytalk.github.io"
+description: "Parce que certains films méritent d'être découpés en morceaux."
+podcast-description: "Parce que certains films méritent d'être découpés en morceaux. "
+url: "https://lecritiquealamachette.github.io"
 baseurl: ""
 author:
-  name: "Le Moine Lunaire"
+  name: "G. Thekiller"
   email: ""
-  url: "https://horrorcomedytalk.github.io"
+  url: "https://lecritiquealamachette.github.io"
 permalink: pretty
 keywords: [podcast, sons, meditation, espace, abysses, mystere]
 
