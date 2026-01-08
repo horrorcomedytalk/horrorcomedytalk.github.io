@@ -1,13 +1,13 @@
 # Site settings
-title: "L'Écho des Songes"
-description: "Voyages au pays des sons méconnus"
-podcast-description: "Audiothèque méditative des mystères de l'espace, des abysses et des phénomènes terrestres insolites."
-url: "https://echosdessonges.github.io"
+title: "Horror Comedy Talk"
+description: "Les interviews des objets stars du cinéma"
+podcast-description: "Les interviews des objets stars du cinéma"
+url: "https://https://horrorcomedytalk.github.io/"
 baseurl: ""
 author:
   name: "Le Moine Lunaire"
   email: ""
-  url: "https://echosdesonges.github.io"
+  url: "https://Les interviews des objets stars du cinéma"
 permalink: pretty
 keywords: [podcast, sons, meditation, espace, abysses, mystere]
 
