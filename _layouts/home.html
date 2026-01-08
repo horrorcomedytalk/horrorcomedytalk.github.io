@@ -30,7 +30,6 @@ layout: default
             {% else %}
                 {{ post.content | strip_html | truncatewords:100 }}
             {% endif %}
-            <span class="continue-reading"><a href="{{ post.url | absolute_url }}">Continue</a></span> 
         </p> 
     </div>
 
